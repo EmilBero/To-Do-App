@@ -1,21 +1,84 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+}
+
+#container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
 h1 {
     color: #333;
+    text-align: center;
+    font-size: 24px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+textarea {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 60%;
+    margin-right: 8px;
+    resize: vertical; /* Allows vertical resizing */
+    height: 40px; /* Initial height */
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5cb85c;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
 }
 
 #todo-list {
     list-style: none;
     padding: 0;
+    width: 100%;
+    margin: auto;
 }
 
 .todo-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word; /* Ensures long words break to the next line */
+}
+
+.todo-item span {
+    flex-grow: 1;
+    margin-right: 10px;
 }
 
 .completed {
@@ -25,5 +88,48 @@ h1 {
 
 .actions {
     display: flex;
-    gap: 10px;
+    gap: 8px;
+}
+
+.actions button {
+    background-color: #0275d8;
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+.actions button:hover {
+    background-color: #025aa5;
+}
+
+.actions button:last-child {
+    background-color: #d9534f;
+}
+
+.actions button:last-child:hover {
+    background-color: #c9302c;
+}
+
+footer {
+    height: 1% ;
+    background-color: #ECF0F1;
+    color: #4A4A4A;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+    position: fixed; /* Make the footer stick to the bottom */
+    bottom: 0; /* Align it to the bottom */
+    left: 0;
+}
+
+footer a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
